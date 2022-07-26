@@ -9,41 +9,41 @@ public class WrongLoginException extends Exception {
         loginConditionViolated = conditionViolated;
     }
 
-    public String printMessage() {
+    public void printMessage() {
 
         switch (loginConditionViolated) {
 
 
             case 1:
-                return ("Login length should be"
+                System.out.println("Login length should be"
                         + " between 4 to 20 characters");
 
 
             case 2:
-                return ("Login should not"
+                System.out.println("Login should not"
                         + " contain any space");
 
 
             case 3:
-                return ("Login should contain"
+                System.out.println("Login should contain"
                         + " at least one digit(0-9)");
 
 
             case 4:
-                return ("Login should contain at "
+                System.out.println("Login should contain at "
                         + "least one special character");
 
 
             case 5:
-                return ("Login should contain at"
+                System.out.println("Login should contain at"
                         + " least one uppercase letter(A-Z)");
 
 
             case 6:
-                return ("Login should contain at"
+                System.out.println("Login should contain at"
                         + " least one lowercase letter(a-z)");
         }
 
-        return ("true");
+
     }
 }
